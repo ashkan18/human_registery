@@ -32,6 +32,6 @@
     <%= submit "Register me as a lawful human", class: "btn btn-primary" %>
   </div>
   <aside>
-   * All emails and names are encrypted.
+   * All emails and names are stored encrypted.
   </aside>
 <% end %>
