@@ -1,0 +1,8 @@
+<h2>Show humans</h2>
+
+<ul>
+
+</ul>
+
+<%= link "Edit", to: humans_path(@conn, :edit, @humans) %>
+<%= link "Back", to: humans_path(@conn, :index) %>

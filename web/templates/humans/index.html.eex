@@ -1,0 +1,24 @@
+<h2>Listing humans</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for humans <- @humans do %>
+    <tr>
+
+      <td class="text-right">
+        <%= link "Show", to: humans_path(@conn, :show, humans), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: humans_path(@conn, :edit, humans), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: humans_path(@conn, :delete, humans), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New humans", to: humans_path(@conn, :new) %>

@@ -1,0 +1,8 @@
+<div class="about">
+  As a non-alien/permanent resident of planet earth, you are required to register as human. Not registering may impact your residency status and you may not be able to return to the earth after leaving.
+</div>
+
+<h2>Registration form</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: humans_path(@conn, :create) %>

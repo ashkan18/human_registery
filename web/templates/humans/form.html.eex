@@ -1,0 +1,37 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= label f, :name, class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+  </div>
+  <div class="form-group">
+    <%= label f, :email, class: "control-label" %>
+    <%= text_input f, :email, class: "form-control" %>
+    <%= error_tag f, :email %>
+  </div>
+  <div class="form-group">
+    <label for: "gender" class: "control-label" required>Gender </label>
+    <input type="radio" name="gender" value="fuck_yourself" required> Are you kidding me?! it's 2017!</br>
+  </div>
+  <div class="form-group">
+    <label for: "religion" class: "control-label" required>Religion </label>
+    <input type="radio" name="religion" value="fuck_yourself" required> You tell me!</br>
+  </div>
+  <div class="form-group">
+    <label for: "race" class: "control-label" required>Race </label>
+    <input type="radio" name="race" value="fuck_yourself" required> You mean color of my skin? Well go figure!</br>
+  </div>
+  <input type="checkbox" name="checkbox" value="check" id="agree" required/> I have read and agree to the Terms and Conditions and Privacy Policy (Which we don't have)
+  <div class="form-group">
+    </br>
+    <%= submit "Register me as a lawful human", class: "btn btn-primary" %>
+  </div>
+  <aside>
+   * All emails and names are encrypted.
+  </aside>
+<% end %>
