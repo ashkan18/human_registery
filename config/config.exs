@@ -23,8 +23,8 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-config :cipher, keyphrase: System.get_env("KEYPHRASE"),
-                ivphrase: System.get_env("IVPHRASE"),
+config :cipher, keyphrase: System.get_env("KEYPHRASE") || "nobann0wall",
+                ivphrase: System.get_env("IVPHRASE") || "fr3ed0m",
                 magic_token: System.get_env("MAGIC_TOKEN")
 
 # Import environment specific config. This must remain at the bottom

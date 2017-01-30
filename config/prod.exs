@@ -16,6 +16,12 @@ config :human_registry, HumanRegistry.Endpoint,
   url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/manifest.json"
 
+config :human_registry, HumanRegistry.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: 20,
+  ssl: true
+
 # Do not print debug messages in production
 config :logger, level: :info
 
