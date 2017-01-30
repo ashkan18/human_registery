@@ -10,4 +10,4 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-HumanRegistry.Repo.insert!(%HumanRegistry.Humans{names: ["Ashkan Nasseri"], emails: ["ashkan@humansregistry.com"]})
+HumanRegistry.Repo.insert!(%HumanRegistry.Humans{names: [Cipher.encrypt("Ashkan Nasseri")], emails: [Cipher.encrypt("ashkan@humansregistry.com")]})
