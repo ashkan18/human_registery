@@ -23,9 +23,9 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-config :cipher, keyphrase: System.get_env("KEYPHRASE") || "testiekeyphraseforcipher",
-                ivphrase: System.get_env("IVPHRASE") || "testieivphraseforcipher",
-                magic_token: System.get_env("MAGIC_TOKEN") || "magictoken"
+config :cipher, keyphrase: System.get_env("KEYPHRASE"),
+                ivphrase: System.get_env("IVPHRASE"),
+                magic_token: System.get_env("MAGIC_TOKEN")
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
