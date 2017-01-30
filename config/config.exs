@@ -11,8 +11,7 @@ config :human_registry,
 
 # Configures the endpoint
 config :human_registry, HumanRegistry.Endpoint,
-  url: [scheme: "https", host: System.get_env("HOST"), port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  url: [host: "localhost"],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   render_errors: [view: HumanRegistry.ErrorView, accepts: ~w(html json)],
   pubsub: [name: HumanRegistry.PubSub,
