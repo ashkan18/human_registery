@@ -18,7 +18,7 @@ config :human_registry, HumanRegistry.Endpoint,
 config :human_registry, HumanRegistry.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
-  pool_size: 20,
+  pool_size: 10,
   ssl: true
 
 # Do not print debug messages in production
