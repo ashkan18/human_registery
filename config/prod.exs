@@ -13,8 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :human_registry, HumanRegistry.Endpoint,
   url: [scheme: "https", host: System.get_env("HOST"), port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]],
-  cache_static_manifest: "priv/static/manifest.json"
+  force_ssl: [rewrite_on: [:x_forwarded_proto]]
 
 config :human_registry, HumanRegistry.Repo,
   adapter: Ecto.Adapters.Postgres,
