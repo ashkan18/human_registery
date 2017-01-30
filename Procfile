@@ -1,1 +1,1 @@
-web: elixir -S mix phoenix.server
+web: MIX_ENV=prod elixir -S mix phoenix.server
