@@ -12,7 +12,8 @@ config :human_registry,
 # Configures the endpoint
 config :human_registry, HumanRegistry.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: System.get_env("SECRET_KEY_BASE"),
+  root: Path.dirname(__DIR__),
+  secret_key_base: "CsINj8BieS6I5H8N9As30aIv32qdG6fJhJySPs9Lvv69w8PT17w6eBZUxsitUXpM",
   render_errors: [view: HumanRegistry.ErrorView, accepts: ~w(html json)],
   pubsub: [name: HumanRegistry.PubSub,
            adapter: Phoenix.PubSub.PG2]
